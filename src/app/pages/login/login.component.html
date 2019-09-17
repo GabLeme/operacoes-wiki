@@ -1,0 +1,20 @@
+<form class="text-center login-box">
+
+    <a class="logo navbar-brand nav-logo"><strong class="nav-title">OP</strong>wiki</a>
+
+    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" [(ngModel)]="username"
+        name="a">
+
+    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Senha"
+        [(ngModel)]="password" name="b">
+
+    <div class="d-flex justify-content-around">
+        <p class="text-danger">{{hasError}}</p>
+    </div>
+    <button type="button" class="btn btn-primary" style="width: 200px" (click)="doLogin()">
+        Entrar
+    </button>
+
+
+
+</form>

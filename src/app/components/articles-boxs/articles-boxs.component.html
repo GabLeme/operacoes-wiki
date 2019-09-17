@@ -1,0 +1,7 @@
+<div *ngFor="let a of articles" class="card" (click)="seeArticle(a)">
+    <div class="card-body">
+        <span class="article-title">{{a.tituloArtigo}}</span>
+        <br>
+        <span class="article-author">Autor: {{a.autor}}</span>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="col text-center">
+                <h1>{{article.tituloArtigo}}</h1>
+                <p class="text-center">Autor: {{article.autor}}</p>
+                <div class="text-justify" id="conteudo-artigo"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Comments section -->
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col text-justify">
+                    <mdb-card>
+                        <mdb-card-body>
+                            <mdb-card-title>
+                                <h5>Adicionar Comentário</h5>
+                            </mdb-card-title>
+                            <div class="col">
+                                <div class="md-form">
+                                    <textarea type="text" id="form7" class="md-textarea form-control"
+                                        mdbInput [(ngModel)]="newComment.comentario" name="newComment"></textarea>
+                                    <label for="form7">Deixe sua opnião.</label>
+                                </div>
+                            </div>
+                            <div class="col text-right">
+                                <button type="button" class="btn btn-primary" (click)="addComment()">
+                                    <mdb-icon fas icon="plus"></mdb-icon> Salvar
+                                </button>
+                            </div>
+                        </mdb-card-body>
+                    </mdb-card>
+                </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col text-center">
+                    <h1>Comentários</h1>
+                </div>
+            </div>
+            <div class="single-comment" *ngFor="let c of comments">
+                <div class="row">
+                    <div class="col text-justify">
+                        <mdb-icon fas icon="user-circle" size="3x"></mdb-icon>
+                        {{c.autor}}
+                        <mdb-card>
+                            <mdb-card-body>
+                                <span>{{c.comentario}}</span>
+                            </mdb-card-body>
+                        </mdb-card>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

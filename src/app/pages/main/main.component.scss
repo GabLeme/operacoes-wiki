@@ -1,0 +1,22 @@
+h2 {
+  color: #fff;
+}
+
+.articles-list {
+  padding-top: 30px;
+}
+
+.md-form input[type="text"]:focus {
+  box-shadow: 0 1px 0 0 #fff !important;
+  border-bottom: 1px solid #fff !important;
+  color: #fff;
+}
+
+.md-form input[type="text"]:focus:not([readonly]) + label {
+  color: #fff;
+}
+
+// .articles{
+//   height: 250px;
+//   overflow: scroll;
+// }

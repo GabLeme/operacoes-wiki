@@ -1,0 +1,15 @@
+.card {
+  background: #261f2d !important;
+  width: auto;
+  margin-top: 20px;
+}
+
+.md-form input[type="text"]:focus {
+  box-shadow: 0 1px 0 0 #fff !important;
+  border-bottom: 1px solid #fff !important;
+  color: #fff;
+}
+
+.md-form input[type="text"]:focus:not([readonly]) + label {
+  color: #fff;
+}

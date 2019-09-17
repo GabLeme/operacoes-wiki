@@ -1,0 +1,40 @@
+<app-header></app-header>
+<main>
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-4">
+                <div class="md-form">
+                    <input mdbInput type="text" id="nomeFerramenta" class="form-control" name="nomeFerramenta"
+                        [(ngModel)]="nomeFerramenta">
+                    <label for="nomeFerramenta" class="">Nome da ferramenta</label>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="md-form">
+                    <button type="button" class="btn btn-primary" (click)="findArticleByToolName()">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5 text-center">
+            <div class="col text-justify">
+                <h2>Artigos</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-right">
+                <button type="button" class="btn btn-primary" routerLink="/create-article">
+                    <mdb-icon fas icon="plus"></mdb-icon> Novo artigo
+                </button>
+            </div>
+        </div>
+        <div class="row articles-list">
+            <div class="col text-justify">
+                <div class="articles">
+                    <app-articles-boxs></app-articles-boxs>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

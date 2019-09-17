@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <div class="md-form">
+                        <input mdbInput type="text" id="nomeFerramenta" class="form-control"
+                            [(ngModel)]="nomeFerramenta" name="a">
+                        <label for="nomeFerramenta" class="">Nome da ferramenta</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="md-form">
+                        <input type="text" id="tituloArtigo" class="form-control" length="15" [(ngModel)]="tituloArtigo"
+                            mdbCharCounter mdbInput name="b">
+                        <label for="tituloArtigo" class="">Titulo do Artigo</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="md-form">
+                        <ckeditor [editor]="Editor" [(ngModel)]="model.editorData" (change)="onChange($event)"
+                            (ready)="onReady($event)">
+                        </ckeditor>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="md-form">
+                        <button type="button" class="btn btn-primary" (click)="save()">
+                            <i class="fas fa-save"></i> Criar artigo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
